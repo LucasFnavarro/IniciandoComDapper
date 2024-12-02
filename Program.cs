@@ -9,7 +9,7 @@ namespace IniciandoComDapper
     {
         static void Main(string[] args)
         {
-            const string CONNECTION_STRING = @"Server=localhost,1433;Database=balta;User ID=sa;Password=1q2w3e4r@#$;TrustServerCertificate=true";
+            const string CONNECTION_STRING = @"";
 
             using var connection = new SqlConnection(CONNECTION_STRING);
 
