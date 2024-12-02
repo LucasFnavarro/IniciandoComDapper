@@ -17,7 +17,7 @@ namespace IniciandoComDapper
             // UpdateCategory(connection, "aaeac888-9711-44ec-bf66-e0c22b8ce20e");
             // DeleteCategory(connection);
             // GetAllCategories(connection);
-            GetCategoryById(connection);
+            GetCategoryById(connection, "09ce0b7b-cfca-497b-92c0-3290ad9d5142");
         }
 
         public static void GetAllCategories(SqlConnection connection)
@@ -32,14 +32,14 @@ namespace IniciandoComDapper
             }
         }
 
-        public static void GetCategoryById(SqlConnection connection)
+        public static void GetCategoryById(SqlConnection connection, string id)
         {
             var sql = "SELECT * FROM [Category] WHERE [Id] = @Id";
 
             var categoryId = connection.QueryFirstOrDefault(sql,
             new
             {
-                Id = "09ce0b7b-cfca-497b-92c0-3290ad9d5142"
+                Id = id
             });
 
             Console.WriteLine(categoryId);
